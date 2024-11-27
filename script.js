@@ -18,3 +18,6 @@ console.log("Name:", student1.name);
 console.log("Age:", student1.age);
 
 student1.displayInfo();
+
+const studentJSON = JSON.stringify(student1);
+console.log("JSON string:", studentJSON);
