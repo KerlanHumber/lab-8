@@ -19,5 +19,10 @@ console.log("Age:", student1.age);
 
 student1.displayInfo();
 
+// Converting the student object into JSON
 const studentJSON = JSON.stringify(student1);
 console.log("JSON string:", studentJSON);
+
+// Converting the JSON string back to JavaScript
+const studentObjectFromJSON = JSON.parse(studentJSON);
+console.log("Object from JSON:", studentObjectFromJSON);
