@@ -7,13 +7,14 @@ class Student {
     }
 
     displayInfo(){
-        console.log(`Name: ${this.name}, Age: ${this.age}`);
+        console.log(`Name: ${this.name}, Age: ${this.age},`);
     }
 }
 
+// Creating the object
 const student1 = new Student("Alice", 20,["Math", "Science", "History"]);
 
-
+// Print the name and age
 console.log("Name:", student1.name);
 console.log("Age:", student1.age);
 
@@ -30,4 +31,17 @@ console.log("Object from JSON:", studentObjectFromJSON);
 // Comparint the two objects
 console.log("Are they equal?", student1 === studentObjectFromJSON);
 
+// Destructuring the student object
+const { name, courses } = student1;
+console.log("Name:", name);
+console.log("Courses:", courses);
+
+//Destructuring the scores array
+const scores = [75, 50, 99, 62];
+const [firstScore, secondScore, thirdScore, fourthScore] = scores;
+console.log("First Score:", firstScore);
+console.log("Second Score:", secondScore);
+
+// Cloning the student object
+const studentClone = { ...student1 };
 
