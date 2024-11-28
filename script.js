@@ -6,13 +6,27 @@ class Student {
         this.courses = courses;
     }
 
+    addCourse(course) {
+        this.courses.push(course);
+    }
+
+    getTotalCourses() {
+        return this.courses.length;
+    }
+
     displayInfo(){
-        console.log(`Name: ${this.name}, Age: ${this.age}, `);
+        console.log(`Name: ${this.name}, Age: ${this.age}, Courses: ${this.courses} `);
     }
 }
 
 // Creating the object
-const student1 = new Student("Alice", 20, "Math", "Science", "History");
+const student1 = new Student("Alice", 23, true,["Math", "Science", "History"]);
+
+// Adding a new course
+student1.addCourse("French");
+
+// Calculate and print the total number of courses
+console.log("Total Courses:", student1.getTotalCourses());
 
 // Print the name and age
 console.log("Name:", student1.name);
@@ -48,3 +62,8 @@ const studentClone = { ...student1 };
 //Adding a new property to the clone
 studentClone.graduationYear = 2025;
 console.log("Student Clone:", studentClone);
+
+// Merging arrays
+const newCourses = ["Literature", "English"];
+const mergedCourses = [...student1.courses, ...newCourses];
+console.log("Merged Courses:", mergedCourses);
