@@ -1,3 +1,4 @@
+// Creating the object
 class Student {
     constructor(name, age, enrolled, courses){
         this.name = name;
@@ -19,7 +20,6 @@ class Student {
     }
 }
 
-// Creating the object
 const student1 = new Student("Alice", 23, true,["Math", "Science", "History"]);
 
 // Adding a new course
