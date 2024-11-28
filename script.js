@@ -7,12 +7,12 @@ class Student {
     }
 
     displayInfo(){
-        console.log(`Name: ${this.name}, Age: ${this.age},`);
+        console.log(`Name: ${this.name}, Age: ${this.age}, `);
     }
 }
 
 // Creating the object
-const student1 = new Student("Alice", 20,["Math", "Science", "History"]);
+const student1 = new Student("Alice", 20, "Math", "Science", "History");
 
 // Print the name and age
 console.log("Name:", student1.name);
@@ -38,10 +38,13 @@ console.log("Courses:", courses);
 
 //Destructuring the scores array
 const scores = [75, 50, 99, 62];
-const [firstScore, secondScore, thirdScore, fourthScore] = scores;
+const [firstScore, secondScore, ...restScores] = scores;
 console.log("First Score:", firstScore);
 console.log("Second Score:", secondScore);
 
 // Cloning the student object
 const studentClone = { ...student1 };
 
+//Adding a new property to the clone
+studentClone.graduationYear = 2025;
+console.log("Student Clone:", studentClone);
