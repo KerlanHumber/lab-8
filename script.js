@@ -67,3 +67,9 @@ console.log("Student Clone:", studentClone);
 const newCourses = ["Literature", "English"];
 const mergedCourses = [...student1.courses, ...newCourses];
 console.log("Merged Courses:", mergedCourses);
+
+// Calculating the average score
+const totalScore = scores.reduce((acc, score) => acc + score, 0);
+const averageScore = totalScore / scores.length;
+
+console.log("Average Score:", averageScore);
